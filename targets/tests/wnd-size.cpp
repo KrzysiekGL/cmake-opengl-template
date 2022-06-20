@@ -10,3 +10,4 @@ TEST_CASE("Window tests", "[example-lib]") {
 	REQUIRE(size.first==600);
 	REQUIRE(size.second==400);
 }
+

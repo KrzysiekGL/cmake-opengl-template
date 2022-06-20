@@ -25,3 +25,4 @@ add_executable(tests targets/tests/wnd-size.cpp)
 target_link_libraries(tests PRIVATE Catch2::Catch2WithMain)
 target_include_directories(tests PRIVATE ${EXLIB_INCLUDE_DIR})
 target_link_libraries(tests PRIVATE exlib)
+
