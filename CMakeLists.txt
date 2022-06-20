@@ -19,3 +19,10 @@ target_link_libraries(app PUBLIC exlib)
 target_include_directories(app PUBLIC ${GL_INCLUDE_DIRS})
 target_link_libraries(app PUBLIC GL)
 
+# Setup Catch2 along with tests
+add_subdirectory(libs/Catch2)
+add_executable(tests targets/tests/wnd-size.cpp)
+target_link_libraries(tests PRIVATE Catch2::Catch2WithMain)
+target_include_directories(tests PRIVATE ${EXLIB_INCLUDE_DIR})
+target_link_libraries(tests PRIVATE exlib)
+
